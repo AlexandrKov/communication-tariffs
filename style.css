@@ -67,12 +67,6 @@ body, html {
     align-items: center;
 }
 
-@media (max-width: 770px) {
-    .header_contact {
-        flex-direction: column;
-    }
-}
-
 .header_social {
     display: flex;
     gap: 15px;
@@ -94,10 +88,9 @@ body, html {
     color: white;
 }
 
-@media (max-width: 770px) {
-    .header_phone {
-        font-size: 20px;
-    }
+.header_phone a {
+    text-decoration: none;
+    color: white;
 }
 
 .header_menu_list {
@@ -113,6 +106,21 @@ body, html {
     color: white;
     font-weight: 700;
     text-transform: uppercase;
+}
+
+@media (max-width: 770px) {
+
+    .header_contact {
+        flex-direction: column;
+    }
+
+    .header_phone {
+        font-size: 20px;
+    }
+
+    .header_menu_list {
+        text-align: center;
+    }
 }
 
 /* main */
@@ -268,7 +276,7 @@ body, html {
 
 @media (max-width: 1600px) {
     .inet_items {
-        padding: 0;
+        padding: 30px;
     }
 }
 
@@ -288,6 +296,14 @@ body, html {
 .inet_item {
     display: flex;
     justify-content: space-between;
+}
+
+@media (max-width: 700px) {
+    .inet_item {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
 }
 
 .inet_item_left {
@@ -313,6 +329,10 @@ body, html {
 .inet_name {
     display: flex;
     margin-left: 10px;
+}
+
+.inet_name span {
+    margin-right: 10px;
 }
 
 .inet_btn {
@@ -489,12 +509,6 @@ body, html {
 
     .sub {
         padding: 70px 20px;
-    }
-
-    .inet_item {
-        flex-direction: column;
-        align-items: center;
-        gap: 30px;
     }
 
     .inet_items {
